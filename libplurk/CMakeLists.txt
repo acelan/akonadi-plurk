@@ -3,7 +3,6 @@ project(plurk)
 include_directories(
   ${CMAKE_SOURCE_DIR}
   ${CMAKE_BINARY_DIR}
-  ${Boost_INCLUDE_DIR}
   #${KDE4_INCLUDES}
   #${QT_INCLUDES}
   #${QJSON_INCLUDE_DIR}
