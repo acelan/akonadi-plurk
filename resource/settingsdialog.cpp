@@ -61,7 +61,14 @@ void SettingsDialog::setupWidgets()
 
 void SettingsDialog::showAuthenticationDialog()
 {
-    PlurkApiOAuth::self()->authorizeUser();
+    bool ret;
+    ret = PlurkApiOAuth::self()->authorizeUser();
+    if ( ret == true ) {
+	QString accessToken = QString(PlurkApiOAuth::self()->oauthToken());
+	kDebug() << "accessToken = " << accessToken << endl;
+
+	authenticationDone(accessToken);
+    }
 }
 
 void SettingsDialog::authenticationCanceled()
