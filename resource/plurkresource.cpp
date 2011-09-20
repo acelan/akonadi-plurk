@@ -12,7 +12,6 @@
 
 using namespace Akonadi;
 
-static const char* friendsRID = "friends";
 static const char* plurksRID = "plurks";
 
 PlurkResource::PlurkResource( const QString &id )
@@ -39,28 +38,16 @@ void PlurkResource::retrieveCollections()
   // collections your resource provides.
   // Be sure to set the remote ID and the content MIME types
 
-  Collection plurks;
+  Collection plurks( Akonadi::Collection::root() );
   plurks.setRemoteId( plurksRID );
-  plurks.setName( i18n( "Posts" ) );
-  plurks.setParentCollection( Akonadi::Collection::root() );
-  plurks.setContentMimeTypes( QStringList() << "text/directory" );
+  plurks.setName( i18n( "Plurk" ) );
+  plurks.setContentMimeTypes( QStringList() << "application/x-vnd.kde.microblog" );
   plurks.setRights(Collection::ReadOnly);
   EntityDisplayAttribute * const plurksDisplayAttribute = new EntityDisplayAttribute();
   plurksDisplayAttribute->setIconName( "plurkresource" );
   plurks.addAttribute( plurksDisplayAttribute );
 
-  Collection friends;
-  friends.setRemoteId( friendsRID );
-  friends.setName( i18n( "Friends" ) );
-  friends.setParentCollection( Akonadi::Collection::root() );
-  friends.setContentMimeTypes( QStringList() << "text/directory" );
-  friends.setRights( Collection::ReadOnly );
-  EntityDisplayAttribute * const friendsDisplayAttribute = new EntityDisplayAttribute();
-  friendsDisplayAttribute->setIconName( "plurkresource" );
-  friends.addAttribute( friendsDisplayAttribute );
-
-  collectionsRetrieved( Collection::List() << plurks << friends );
-
+  collectionsRetrieved( Collection::List() << plurks );
 }
 
 void PlurkResource::retrieveItems( const Akonadi::Collection &collection )
