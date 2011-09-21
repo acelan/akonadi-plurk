@@ -6,6 +6,6 @@ Exec=akonadi_plurk_resource
 Icon=plurkresource
 X-Ubuntu-Gettext-Domain=desktop_kdesdk
 
-X-Akonadi-MimeTypes=text/directory
+X-Akonadi-MimeTypes=application/x-vnd.kde.microblog
 X-Akonadi-Capabilities=Resource
 X-Akonadi-Identifier=akonadi_plurk_resource
