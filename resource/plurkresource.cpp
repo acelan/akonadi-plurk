@@ -10,6 +10,8 @@
 #include <QtDBus/QDBusConnection>
 #include <Akonadi/EntityDisplayAttribute>
 
+#include <KMessageBox>
+
 using namespace Akonadi;
 
 static const char* plurksRID = "plurks";
@@ -54,6 +56,7 @@ void PlurkResource::retrieveItems( const Akonadi::Collection &collection )
 {
   Q_UNUSED( collection );
 
+  KMessageBox::information(0, "retrieveItems", "PlurkResource: retrieveItems");
   // TODO: this method is called when Akonadi wants to know about all the
   // items in the given collection. You can but don't have to provide all the
   // data for each item, remote ID and MIME type are enough at this stage.
@@ -66,6 +69,7 @@ bool PlurkResource::retrieveItem( const Akonadi::Item &item, const QSet<QByteArr
   Q_UNUSED( item );
   Q_UNUSED( parts );
 
+  KMessageBox::information(0, "retrieveItem", "PlurkResource: retrieveItem");
   // TODO: this method is called when Akonadi wants more data for a given item.
   // You can only provide the parts that have been requested but you are allowed
   // to provide all in one go
@@ -109,6 +113,7 @@ void PlurkResource::itemAdded( const Akonadi::Item &item, const Akonadi::Collect
   Q_UNUSED( item );
   Q_UNUSED( collection );
 
+  KMessageBox::information(0, "itemAdded", "PlurkResource: itemAdded");
   // TODO: this method is called when somebody else, e.g. a client application,
   // has created an item in a collection managed by your resource.
 
@@ -121,6 +126,7 @@ void PlurkResource::itemChanged( const Akonadi::Item &item, const QSet<QByteArra
   Q_UNUSED( item );
   Q_UNUSED( parts );
 
+  KMessageBox::information(0, "itemChanged", "PlurkResource: itemChanged");
   // TODO: this method is called when somebody else, e.g. a client application,
   // has changed an item managed by your resource.
 
@@ -132,6 +138,7 @@ void PlurkResource::itemRemoved( const Akonadi::Item &item )
 {
   Q_UNUSED( item );
 
+  KMessageBox::information(0, "itemRemoved", "PlurkResource: itemRemoved");
   // TODO: this method is called when somebody else, e.g. a client application,
   // has deleted an item managed by your resource.
 
