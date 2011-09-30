@@ -1,3 +1,4 @@
+
 /*
     Copyright (C) 2008-2011 AceLan Kao <acelan@acelan.idv.tw>, Franklin Weng <franklin@goodhorse.idv.tw>
 
@@ -20,61 +21,11 @@
 */
 
 
-#include "plurkapifriendsandfans.h"
+#include "plurkapiusersearch.h"
 
-bool PlurkApiFriendsAndFans::getFriendsByOffset()
+bool PlurkApiUserSearch::search()
 {
-	QString url = apiUrl + "getFriendsByOffset";
+	QString url = apiUrl + "search";
 
 	return false;
 }
-
-bool PlurkApiFriendsAndFans::getFansByOffset()
-{
-	QString url = apiUrl + "getFansByOffset";
-
-	return false;
-}
-
-bool PlurkApiFriendsAndFans::getFollowingByOffset()
-{
-	QString url = apiUrl + "getFollowingByOffset";
-
-	return false;
-}
-
-bool PlurkApiFriendsAndFans::becomeFriend()
-{
-	QString url = apiUrl + "becomeFriend";
-
-	return false;
-}
-
-bool PlurkApiFriendsAndFans::becomeFan()
-{
-	QString url = apiUrl + "becomeFan";
-
-	return false;
-}
-
-bool PlurkApiFriendsAndFans::removeAsFriend()
-{
-	QString url = apiUrl + "removeAsFriend";
-
-	return false;
-}
-
-bool PlurkApiFriendsAndFans::setFollowing()
-{
-	QString url = apiUrl + "setFollowing";
-
-	return false;
-}
-
-bool PlurkApiFriendsAndFans::getCompletion()
-{
-	QString url = apiUrl + "getCompletion";
-
-	return false;
-}
-

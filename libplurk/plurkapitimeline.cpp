@@ -1,103 +1,114 @@
+/*
+    Copyright (C) 2008-2011 AceLan Kao <acelan@acelan.idv.tw>, Franklin Weng <franklin@goodhorse.idv.tw>
+
+    This program is free software; you can redistribute it and/or
+    modify it under the terms of the GNU General Public License as
+    published by the Free Software Foundation; either version 2 of
+    the License or (at your option) version 3 or any later version
+    accepted by the membership of KDE e.V. (or its successor approved
+    by the membership of KDE e.V.), which shall act as a proxy
+    defined in Section 14 of version 3 of the license.
+
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, see http://www.gnu.org/licenses/
+*/
+
 
 #include "plurkapitimeline.h"
 
-const char* plurkTimelineGetPlurkURL = "http://www.plurk.com/APP/Timeline/getPlurk";
-const char* plurkTimelineGetPlurksURL = "http://www.plurk.com/APP/Timeline/getPlurks";
-const char* plurkTimelineGetUnreadPlurksURL = "http://www.plurk.com/APP/Timeline/getUnreadPlurks";
-const char* plurkTimelineGetPublicPlurksURL = "http://www.plurk.com/APP/Timeline/getPublicPlurks";
-const char* plurkTimelinePlurkAddURL = "http://www.plurk.com/APP/Timeline/plurkAdd";
-const char* plurkTimelinePlurkDeleteURL = "http://www.plurk.com/APP/Timeline/plurkDelete";
-const char* plurkTimelinePlurkEditURL = "http://www.plurk.com/APP/Timeline/plurkEdit";
-const char* plurkTimelineMutePlurksURL = "http://www.plurk.com/APP/Timeline/mutePlurks";
-const char* plurkTimelineUnmutePlurksURL = "http://www.plurk.com/APP/Timeline/unmutePlurks";
-const char* plurkTimelineFavoritePlurksURL = "http://www.plurk.com/APP/Timeline/favoritePlurks";
-const char* plurkTimelineUnfavoritePlurksURL = "http://www.plurk.com/APP/Timeline/unfavoritePlurks";
-const char* plurkTimelineReplurkURL = "http://www.plurk.com/APP/Timeline/replurk";
-const char* plurkTimelineUnreplurkURL = "http://www.plurk.com/APP/Timeline/unreplurk";
-const char* plurkTimelineMarkAsReadURL = "http://www.plurk.com/APP/Timeline/markAsRead";
-const char* plurkTimelineUploadPictureURL = "http://www.plurk.com/APP/Timeline/uploadPicture";
-
-PlurkApiTimeline::PlurkApiTimeline()
+bool PlurkApiTimeline::getPlurk()
 {
-	//oauthToken = PlurkApiOAuth::oauthToken();
+	QString url = apiUrl+"getPlurk";
+	return false;
 }
 
-PlurkApiTimeline::~PlurkApiTimeline()
+bool PlurkApiTimeline::getPlurks()
 {
+	QString url = apiUrl+"getPlurks";
+	return false;
 }
 
-int PlurkApiTimeline::getPlurk()
+bool PlurkApiTimeline::getUnreadPlurks()
 {
-	return 0;
+	QString url = apiUrl+"getUnreadPlurks";
+	return false;
 }
 
-int PlurkApiTimeline::getPlurks()
+bool PlurkApiTimeline::getPublicPlurks()
 {
-	return 0;
+	QString url = apiUrl+"getPublicPlurks";
+	return false;
 }
 
-int PlurkApiTimeline::getUnreadPlurks()
+bool PlurkApiTimeline::plurkAdd()
 {
-	return 0;
+	QString url = apiUrl+"plurkAdd";
+	return false;
 }
 
-int PlurkApiTimeline::getPublicPlurks()
+bool PlurkApiTimeline::plurkDelete()
 {
-	return 0;
+	QString url = apiUrl+"plurkDelete";
+	return false;
 }
 
-int PlurkApiTimeline::plurkAdd()
+bool PlurkApiTimeline::plurkEdit()
 {
-	return 0;
+	QString url = apiUrl+"plurkEdit";
+	return false;
 }
 
-int PlurkApiTimeline::plurkDelete()
+bool PlurkApiTimeline::mutePlurks()
 {
-	return 0;
+	QString url = apiUrl+"mutePlurks";
+	return false;
 }
 
-int PlurkApiTimeline::plurkEdit()
+bool PlurkApiTimeline::unmutePlurks()
 {
-	return 0;
+	QString url = apiUrl+"unmutePlurks";
+	return false;
 }
 
-int PlurkApiTimeline::mutePlurks()
+bool PlurkApiTimeline::favoritePlurks()
 {
-	return 0;
+	QString url = apiUrl+"favoritePlurks";
+	return false;
 }
 
-int PlurkApiTimeline::unmutePlurks()
+bool PlurkApiTimeline::unfavoritePlurks()
 {
-	return 0;
+	QString url = apiUrl+"unfavoritePlurks";
+	return false;
 }
 
-int PlurkApiTimeline::favoritePlurks()
+bool PlurkApiTimeline::replurk()
 {
-	return 0;
+	QString url = apiUrl+"replurk";
+	return false;
 }
 
-int PlurkApiTimeline::unfavoritePlurks()
+bool PlurkApiTimeline::unreplurk()
 {
-	return 0;
+	QString url = apiUrl+"unreplurk";
+	return false;
 }
 
-int PlurkApiTimeline::replurk()
+bool PlurkApiTimeline::markAsRead()
 {
-	return 0;
+	QString url = apiUrl+"markAsRead";
+	return false;
 }
 
-int PlurkApiTimeline::unreplurk()
+bool PlurkApiTimeline::uploadPicture()
 {
-	return 0;
-}
-
-int PlurkApiTimeline::markAsRead()
-{
-	return 0;
-}
-
-int PlurkApiTimeline::uploadPicture()
-{
-	return 0;
+	QString url = apiUrl+"uploadPicture";
+	return false;
 }
 

@@ -18,23 +18,24 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, see http://www.gnu.org/licenses/
 */
-#ifndef PLURKAPIREALTIME_H
-#define PLURKAPIREALTIME_H
+#ifndef PLURKAPIPOLLING_H
+#define PLURKAPIPOLLING_H
 
 #include <QObject>
 #include "plurkapi.h"
 #include "libplurk_export.h"
 
-class LIBPLURK_EXPORT PlurkApiRealtime : public QObject
+class LIBPLURK_EXPORT PlurkApiPolling : public QObject
 {
 Q_OBJECT
 public:
-        PlurkApiRealtime():apiUrl( plurkApiUrl+"Realtime/") {}
+        PlurkApiPolling():apiUrl( plurkApiUrl+"Polling/") {}
 
-	bool getUserChannel();
+	bool getPlurks();
+	bool getUnreadCount();
 
 protected:
-        ~PlurkApiRealtime() {}
+        ~PlurkApiPolling() {}
 
 	QString apiUrl;
 };

@@ -20,61 +20,18 @@
 */
 
 
-#include "plurkapifriendsandfans.h"
+#include "plurkapipolling.h"
 
-bool PlurkApiFriendsAndFans::getFriendsByOffset()
+bool PlurkApiPolling::getPlurks()
 {
-	QString url = apiUrl + "getFriendsByOffset";
+	QString url = apiUrl + "getPlurks";
 
 	return false;
 }
 
-bool PlurkApiFriendsAndFans::getFansByOffset()
+bool PlurkApiPolling::getUnreadCount()
 {
-	QString url = apiUrl + "getFansByOffset";
+	QString url = apiUrl + "getUnreadCount";
 
 	return false;
 }
-
-bool PlurkApiFriendsAndFans::getFollowingByOffset()
-{
-	QString url = apiUrl + "getFollowingByOffset";
-
-	return false;
-}
-
-bool PlurkApiFriendsAndFans::becomeFriend()
-{
-	QString url = apiUrl + "becomeFriend";
-
-	return false;
-}
-
-bool PlurkApiFriendsAndFans::becomeFan()
-{
-	QString url = apiUrl + "becomeFan";
-
-	return false;
-}
-
-bool PlurkApiFriendsAndFans::removeAsFriend()
-{
-	QString url = apiUrl + "removeAsFriend";
-
-	return false;
-}
-
-bool PlurkApiFriendsAndFans::setFollowing()
-{
-	QString url = apiUrl + "setFollowing";
-
-	return false;
-}
-
-bool PlurkApiFriendsAndFans::getCompletion()
-{
-	QString url = apiUrl + "getCompletion";
-
-	return false;
-}
-
