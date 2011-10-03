@@ -11,6 +11,7 @@ include_directories(
 )
 
 set(plurk_SRCS
+  plurkapi.cpp
   plurkapialerts.cpp
   plurkapiblocks.cpp
   plurkapicliques.cpp
@@ -79,5 +80,6 @@ install(FILES
   plurkapiresponses.h
   plurkapitimeline.h
   plurkapiusers.h
+  plurktypes.h
   DESTINATION ${INCLUDE_INSTALL_DIR}/plurk COMPONENT Devel
 )

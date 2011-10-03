@@ -24,9 +24,10 @@ along with this program; if not, see http://www.gnu.org/licenses/
 
 #include <QObject>
 #include "plurkapi.h"
+#include "plurktypes.h"
 #include "libplurk_export.h"
 
-class LIBPLURK_EXPORT PlurkApiProfile : public QObject
+class LIBPLURK_EXPORT PlurkApiProfile : public PlurkApi
 {
 Q_OBJECT
 public:
